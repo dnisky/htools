@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¾«ÃÀ±ÚÖ½ - ·¢ÏÖÃÀºÃÊÓ¾õ</title>
+    <title>ç²¾ç¾å£çº¸ - å‘ç°ç¾å¥½è§†è§‰</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -35,7 +35,7 @@
             padding: 0 20px;
         }
 
-        /* Í·²¿ÑùÊ½ */
+        /* å¤´éƒ¨æ ·å¼ */
         header {
             background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             color: white;
@@ -91,7 +91,7 @@
             background-color: #c0392b;
         }
 
-        /* ·ÖÀàµ¼º½ÑùÊ½ */
+        /* åˆ†ç±»å¯¼èˆªæ ·å¼ */
         .categories-section {
             margin-bottom: 2rem;
         }
@@ -144,7 +144,7 @@
             font-size: 1.1rem;
         }
 
-        /* Í¼Æ¬Õ¹Ê¾ÇøÓò */
+        /* å›¾ç‰‡å±•ç¤ºåŒºåŸŸ */
         .gallery-section {
             margin-bottom: 3rem;
         }
@@ -257,7 +257,7 @@
             color: var(--accent-color);
         }
 
-        /* ·ÖÒ³ÑùÊ½ */
+        /* åˆ†é¡µæ ·å¼ */
         .pagination {
             display: flex;
             justify-content: center;
@@ -309,7 +309,7 @@
             border-color: var(--primary-color);
         }
 
-        /* ¼ÓÔØ¶¯»­ */
+        /* åŠ è½½åŠ¨ç”» */
         .loader {
             display: flex;
             justify-content: center;
@@ -330,7 +330,7 @@
             to { transform: rotate(360deg); }
         }
 
-        /* ¿Õ×´Ì¬ */
+        /* ç©ºçŠ¶æ€ */
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -343,7 +343,7 @@
             color: #bdc3c7;
         }
 
-        /* Ò³½Å */
+        /* é¡µè„š */
         footer {
             background-color: var(--secondary-color);
             color: white;
@@ -379,7 +379,7 @@
             font-size: 0.9rem;
         }
 
-        /* ÏìÓ¦Ê½Éè¼Æ */
+        /* å“åº”å¼è®¾è®¡ */
         @media (max-width: 992px) {
             .gallery-container {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -418,16 +418,16 @@
     </style>
 </head>
 <body>
-    <!-- Í·²¿ -->
+    <!-- å¤´éƒ¨ -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <i class="fas fa-image"></i>
-                    <span>¾«ÃÀ±ÚÖ½</span>
+                    <span>ç²¾ç¾å£çº¸</span>
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="ËÑË÷±ÚÖ½...">
+                    <input type="text" placeholder="æœç´¢å£çº¸...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
             </div>
@@ -435,111 +435,111 @@
     </header>
 
     <main class="container">
-        <!-- ·ÖÀàµ¼º½ -->
+        <!-- åˆ†ç±»å¯¼èˆª -->
         <section class="categories-section">
-            <h2 class="section-title"><i class="fas fa-folder-open"></i> ±ÚÖ½·ÖÀà</h2>
+            <h2 class="section-title"><i class="fas fa-folder-open"></i> å£çº¸åˆ†ç±»</h2>
             <div class="categories-container" id="categoriesContainer">
-                <!-- ·ÖÀà°´Å¥½«Í¨¹ıJS¶¯Ì¬Éú³É -->
+                <!-- åˆ†ç±»æŒ‰é’®å°†é€šè¿‡JSåŠ¨æ€ç”Ÿæˆ -->
             </div>
         </section>
 
-        <!-- Í¼Æ¬Õ¹Ê¾ÇøÓò -->
+        <!-- å›¾ç‰‡å±•ç¤ºåŒºåŸŸ -->
         <section class="gallery-section">
             <div class="gallery-header">
-                <h2 class="gallery-title" id="galleryTitle">È«²¿±ÚÖ½</h2>
-                <div class="image-count" id="imageCount">¹² 0 ÕÅÍ¼Æ¬</div>
+                <h2 class="gallery-title" id="galleryTitle">å…¨éƒ¨å£çº¸</h2>
+                <div class="image-count" id="imageCount">å…± 0 å¼ å›¾ç‰‡</div>
             </div>
             
             <div class="gallery-container" id="galleryContainer">
-                <!-- Í¼Æ¬½«Í¨¹ıJS¶¯Ì¬Éú³É -->
+                <!-- å›¾ç‰‡å°†é€šè¿‡JSåŠ¨æ€ç”Ÿæˆ -->
             </div>
 
-            <!-- ¼ÓÔØ×´Ì¬ -->
+            <!-- åŠ è½½çŠ¶æ€ -->
             <div class="loader" id="loader">
                 <div class="spinner"></div>
             </div>
 
-            <!-- ¿Õ×´Ì¬ -->
+            <!-- ç©ºçŠ¶æ€ -->
             <div class="empty-state" id="emptyState" style="display: none;">
                 <i class="fas fa-images"></i>
-                <h3>ÔİÎŞ±ÚÖ½</h3>
-                <p>µ±Ç°·ÖÀàÏÂÃ»ÓĞ±ÚÖ½£¬ÇëÑ¡ÔñÆäËû·ÖÀà</p>
+                <h3>æš‚æ— å£çº¸</h3>
+                <p>å½“å‰åˆ†ç±»ä¸‹æ²¡æœ‰å£çº¸ï¼Œè¯·é€‰æ‹©å…¶ä»–åˆ†ç±»</p>
             </div>
 
-            <!-- ·ÖÒ³ -->
+            <!-- åˆ†é¡µ -->
             <div class="pagination" id="pagination" style="display: none;">
                 <button class="pagination-btn" id="prevBtn" disabled>
-                    <i class="fas fa-chevron-left"></i> ÉÏÒ»Ò³
+                    <i class="fas fa-chevron-left"></i> ä¸Šä¸€é¡µ
                 </button>
                 <div class="page-numbers" id="pageNumbers"></div>
                 <button class="pagination-btn" id="nextBtn">
-                    ÏÂÒ»Ò³ <i class="fas fa-chevron-right"></i>
+                    ä¸‹ä¸€é¡µ <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
         </section>
     </main>
 
-    <!-- Ò³½Å -->
+    <!-- é¡µè„š -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="logo">
                     <i class="fas fa-image"></i>
-                    <span>¾«ÃÀ±ÚÖ½</span>
+                    <span>ç²¾ç¾å£çº¸</span>
                 </div>
                 <div class="footer-links">
-                    <a href="#">¹ØÓÚÎÒÃÇ</a>
-                    <a href="#">°æÈ¨ÉùÃ÷</a>
-                    <a href="#">ÁªÏµÎÒÃÇ</a>
-                    <a href="#">ÒşË½Õş²ß</a>
+                    <a href="#">å…³äºæˆ‘ä»¬</a>
+                    <a href="#">ç‰ˆæƒå£°æ˜</a>
+                    <a href="#">è”ç³»æˆ‘ä»¬</a>
+                    <a href="#">éšç§æ”¿ç­–</a>
                 </div>
                 <div class="copyright">
-                    &copy; 2023 ¾«ÃÀ±ÚÖ½Íø. ±£ÁôËùÓĞÈ¨Àû.
+                    &copy; 2023 ç²¾ç¾å£çº¸ç½‘. ä¿ç•™æ‰€æœ‰æƒåˆ©.
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Ä£ÄâµÄ·ÖÀàJSONÊı¾İ
+        // æ¨¡æ‹Ÿçš„åˆ†ç±»JSONæ•°æ®
         const categoriesData = [
-            { id: 1, name: "×ÔÈ»·ç¾°", icon: "fas fa-mountain", count: 156 },
-            { id: 2, name: "³ÇÊĞ½¨Öş", icon: "fas fa-city", count: 98 },
-            { id: 3, name: "³éÏóÒÕÊõ", icon: "fas fa-palette", count: 76 },
-            { id: 4, name: "¶¯ÎïÊÀ½ç", icon: "fas fa-paw", count: 112 },
-            { id: 5, name: "ĞÇ¿ÕÓîÖæ", icon: "fas fa-star", count: 64 },
-            { id: 6, name: "¼«¼òÖ÷Òå", icon: "fas fa-minus", count: 85 },
-            { id: 7, name: "ÓÎÏ·¶¯Âş", icon: "fas fa-gamepad", count: 123 },
-            { id: 8, name: "ÎÄ×ÖÓïÂ¼", icon: "fas fa-quote-right", count: 42 },
-            { id: 9, name: "½»Í¨¹¤¾ß", icon: "fas fa-car", count: 67 },
-            { id: 10, name: "ÃÀÊ³ÒûÆ·", icon: "fas fa-utensils", count: 54 }
+            { id: 1, name: "è‡ªç„¶é£æ™¯", icon: "fas fa-mountain", count: 156 },
+            { id: 2, name: "åŸå¸‚å»ºç­‘", icon: "fas fa-city", count: 98 },
+            { id: 3, name: "æŠ½è±¡è‰ºæœ¯", icon: "fas fa-palette", count: 76 },
+            { id: 4, name: "åŠ¨ç‰©ä¸–ç•Œ", icon: "fas fa-paw", count: 112 },
+            { id: 5, name: "æ˜Ÿç©ºå®‡å®™", icon: "fas fa-star", count: 64 },
+            { id: 6, name: "æç®€ä¸»ä¹‰", icon: "fas fa-minus", count: 85 },
+            { id: 7, name: "æ¸¸æˆåŠ¨æ¼«", icon: "fas fa-gamepad", count: 123 },
+            { id: 8, name: "æ–‡å­—è¯­å½•", icon: "fas fa-quote-right", count: 42 },
+            { id: 9, name: "äº¤é€šå·¥å…·", icon: "fas fa-car", count: 67 },
+            { id: 10, name: "ç¾é£Ÿé¥®å“", icon: "fas fa-utensils", count: 54 }
         ];
 
-        // Ä£ÄâµÄÍ¼Æ¬Êı¾İ
+        // æ¨¡æ‹Ÿçš„å›¾ç‰‡æ•°æ®
         const imagesData = {
-            "È«²¿": [],
-            "×ÔÈ»·ç¾°": [],
-            "³ÇÊĞ½¨Öş": [],
-            "³éÏóÒÕÊõ": [],
-            "¶¯ÎïÊÀ½ç": [],
-            "ĞÇ¿ÕÓîÖæ": [],
-            "¼«¼òÖ÷Òå": [],
-            "ÓÎÏ·¶¯Âş": [],
-            "ÎÄ×ÖÓïÂ¼": [],
-            "½»Í¨¹¤¾ß": [],
-            "ÃÀÊ³ÒûÆ·": []
+            "å…¨éƒ¨": [],
+            "è‡ªç„¶é£æ™¯": [],
+            "åŸå¸‚å»ºç­‘": [],
+            "æŠ½è±¡è‰ºæœ¯": [],
+            "åŠ¨ç‰©ä¸–ç•Œ": [],
+            "æ˜Ÿç©ºå®‡å®™": [],
+            "æç®€ä¸»ä¹‰": [],
+            "æ¸¸æˆåŠ¨æ¼«": [],
+            "æ–‡å­—è¯­å½•": [],
+            "äº¤é€šå·¥å…·": [],
+            "ç¾é£Ÿé¥®å“": []
         };
 
-        // Éú³ÉÄ£ÄâÍ¼Æ¬Êı¾İ
+        // ç”Ÿæˆæ¨¡æ‹Ÿå›¾ç‰‡æ•°æ®
         function generateMockImages() {
             const categories = Object.keys(imagesData);
             const resolutions = ["1920x1080", "2560x1440", "3840x2160", "5120x2880"];
-            const adjectives = ["ÃÀÀö", "×³¹Û", "Äş¾²", "ÉñÃØ", "¾ªÑŞ", "ÃÎ»Ã", "Ñ¤Àö", "ºêÎ°"];
-            const nouns = ["·ç¾°", "»­Ãæ", "³¡¾°", "ÊÓ½Ç", "¾°É«", "Ë²¼ä", "ÊÀ½ç", "·ÕÎ§"];
+            const adjectives = ["ç¾ä¸½", "å£®è§‚", "å®é™", "ç¥ç§˜", "æƒŠè‰³", "æ¢¦å¹»", "ç»šä¸½", "å®ä¼Ÿ"];
+            const nouns = ["é£æ™¯", "ç”»é¢", "åœºæ™¯", "è§†è§’", "æ™¯è‰²", "ç¬é—´", "ä¸–ç•Œ", "æ°›å›´"];
             
             categories.forEach(category => {
-                if (category === "È«²¿") {
-                    // "È«²¿"·ÖÀà½«°üº¬ËùÓĞÍ¼Æ¬
+                if (category === "å…¨éƒ¨") {
+                    // "å…¨éƒ¨"åˆ†ç±»å°†åŒ…å«æ‰€æœ‰å›¾ç‰‡
                     return;
                 }
                 
@@ -561,21 +561,21 @@
                 }
             });
             
-            // Ìî³ä"È«²¿"·ÖÀà
+            // å¡«å……"å…¨éƒ¨"åˆ†ç±»
             categories.slice(1).forEach(category => {
-                imagesData["È«²¿"] = imagesData["È«²¿"].concat(imagesData[category]);
+                imagesData["å…¨éƒ¨"] = imagesData["å…¨éƒ¨"].concat(imagesData[category]);
             });
         }
 
-        // Ò³Ãæ×´Ì¬
+        // é¡µé¢çŠ¶æ€
         const state = {
-            currentCategory: "È«²¿",
+            currentCategory: "å…¨éƒ¨",
             currentPage: 1,
             imagesPerPage: 20,
             likedImages: JSON.parse(localStorage.getItem('likedImages')) || []
         };
 
-        // DOM ÔªËØ
+        // DOM å…ƒç´ 
         const categoriesContainer = document.getElementById('categoriesContainer');
         const galleryContainer = document.getElementById('galleryContainer');
         const galleryTitle = document.getElementById('galleryTitle');
@@ -587,26 +587,26 @@
         const nextBtn = document.getElementById('nextBtn');
         const pageNumbers = document.getElementById('pageNumbers');
 
-        // ³õÊ¼»¯
+        // åˆå§‹åŒ–
         document.addEventListener('DOMContentLoaded', function() {
             generateMockImages();
             renderCategories();
             renderGallery();
             
-            // ÎªËÑË÷¿òÌí¼ÓÊÂ¼ş
+            // ä¸ºæœç´¢æ¡†æ·»åŠ äº‹ä»¶
             document.querySelector('.search-bar input').addEventListener('input', function(e) {
                 searchImages(e.target.value);
             });
         });
 
-        // äÖÈ¾·ÖÀà
+        // æ¸²æŸ“åˆ†ç±»
         function renderCategories() {
-            // Ìí¼Ó"È«²¿"·ÖÀà
+            // æ·»åŠ "å…¨éƒ¨"åˆ†ç±»
             const allCategory = {
                 id: 0,
-                name: "È«²¿",
+                name: "å…¨éƒ¨",
                 icon: "fas fa-images",
-                count: imagesData["È«²¿"].length
+                count: imagesData["å…¨éƒ¨"].length
             };
             
             const allCategories = [allCategory, ...categoriesData];
@@ -623,15 +623,15 @@
                 `;
                 
                 categoryBtn.addEventListener('click', () => {
-                    // ¸üĞÂµ±Ç°·ÖÀà
+                    // æ›´æ–°å½“å‰åˆ†ç±»
                     state.currentCategory = category.name;
                     state.currentPage = 1;
                     
-                    // ¸üĞÂUI
+                    // æ›´æ–°UI
                     document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
                     categoryBtn.classList.add('active');
                     
-                    // ÖØĞÂäÖÈ¾Í¼¿â
+                    // é‡æ–°æ¸²æŸ“å›¾åº“
                     renderGallery();
                 });
                 
@@ -639,49 +639,49 @@
             });
         }
 
-        // äÖÈ¾Í¼¿â
+        // æ¸²æŸ“å›¾åº“
         function renderGallery() {
             const images = imagesData[state.currentCategory] || [];
             const totalImages = images.length;
             
-            // ¸üĞÂ±êÌâºÍ¼ÆÊı
-            galleryTitle.textContent = state.currentCategory === "È«²¿" ? "È«²¿±ÚÖ½" : `${state.currentCategory}±ÚÖ½`;
-            imageCount.textContent = `¹² ${totalImages} ÕÅÍ¼Æ¬`;
+            // æ›´æ–°æ ‡é¢˜å’Œè®¡æ•°
+            galleryTitle.textContent = state.currentCategory === "å…¨éƒ¨" ? "å…¨éƒ¨å£çº¸" : `${state.currentCategory}å£çº¸`;
+            imageCount.textContent = `å…± ${totalImages} å¼ å›¾ç‰‡`;
             
-            // ÏÔÊ¾¼ÓÔØ×´Ì¬
+            // æ˜¾ç¤ºåŠ è½½çŠ¶æ€
             loader.style.display = 'flex';
             galleryContainer.style.display = 'none';
             emptyState.style.display = 'none';
             pagination.style.display = 'none';
             
-            // Ä£Äâ¼ÓÔØÑÓ³Ù
+            // æ¨¡æ‹ŸåŠ è½½å»¶è¿Ÿ
             setTimeout(() => {
                 if (totalImages === 0) {
-                    // Ã»ÓĞÍ¼Æ¬£¬ÏÔÊ¾¿Õ×´Ì¬
+                    // æ²¡æœ‰å›¾ç‰‡ï¼Œæ˜¾ç¤ºç©ºçŠ¶æ€
                     loader.style.display = 'none';
                     emptyState.style.display = 'block';
                     return;
                 }
                 
-                // ¼ÆËã·ÖÒ³
+                // è®¡ç®—åˆ†é¡µ
                 const totalPages = Math.ceil(totalImages / state.imagesPerPage);
                 const startIndex = (state.currentPage - 1) * state.imagesPerPage;
                 const endIndex = Math.min(startIndex + state.imagesPerPage, totalImages);
                 const pageImages = images.slice(startIndex, endIndex);
                 
-                // äÖÈ¾Í¼Æ¬
+                // æ¸²æŸ“å›¾ç‰‡
                 renderImages(pageImages);
                 
-                // äÖÈ¾·ÖÒ³
+                // æ¸²æŸ“åˆ†é¡µ
                 renderPagination(totalPages);
                 
-                // Òş²Ø¼ÓÔØ×´Ì¬
+                // éšè—åŠ è½½çŠ¶æ€
                 loader.style.display = 'none';
                 galleryContainer.style.display = 'grid';
             }, 500);
         }
 
-        // äÖÈ¾Í¼Æ¬
+        // æ¸²æŸ“å›¾ç‰‡
         function renderImages(images) {
             galleryContainer.innerHTML = '';
             
@@ -699,7 +699,7 @@
                         <p class="image-resolution">${image.resolution}</p>
                         <div class="image-actions">
                             <button class="download-btn">
-                                <i class="fas fa-download"></i> ÏÂÔØ
+                                <i class="fas fa-download"></i> ä¸‹è½½
                             </button>
                             <button class="like-btn ${isLiked ? 'liked' : ''}" data-id="${image.id}">
                                 <i class="fas fa-heart"></i> ${image.likes + (isLiked ? 1 : 0)}
@@ -708,14 +708,14 @@
                     </div>
                 `;
                 
-                // Ìí¼ÓÏÂÔØ°´Å¥ÊÂ¼ş
+                // æ·»åŠ ä¸‹è½½æŒ‰é’®äº‹ä»¶
                 const downloadBtn = imageCard.querySelector('.download-btn');
                 downloadBtn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    alert(`¿ªÊ¼ÏÂÔØ: ${image.title} (${image.resolution})`);
+                    alert(`å¼€å§‹ä¸‹è½½: ${image.title} (${image.resolution})`);
                 });
                 
-                // Ìí¼ÓÏ²»¶°´Å¥ÊÂ¼ş
+                // æ·»åŠ å–œæ¬¢æŒ‰é’®äº‹ä»¶
                 const likeBtn = imageCard.querySelector('.like-btn');
                 likeBtn.addEventListener('click', () => {
                     toggleLike(image.id, likeBtn);
@@ -725,29 +725,29 @@
             });
         }
 
-        // ÇĞ»»Ï²»¶×´Ì¬
+        // åˆ‡æ¢å–œæ¬¢çŠ¶æ€
         function toggleLike(imageId, likeBtn) {
             const index = state.likedImages.indexOf(imageId);
             const isLiked = index !== -1;
             const likeCount = parseInt(likeBtn.textContent.match(/\d+/)[0]);
             
             if (isLiked) {
-                // È¡ÏûÏ²»¶
+                // å–æ¶ˆå–œæ¬¢
                 state.likedImages.splice(index, 1);
                 likeBtn.classList.remove('liked');
                 likeBtn.innerHTML = `<i class="fas fa-heart"></i> ${likeCount - 1}`;
             } else {
-                // Ìí¼ÓÏ²»¶
+                // æ·»åŠ å–œæ¬¢
                 state.likedImages.push(imageId);
                 likeBtn.classList.add('liked');
                 likeBtn.innerHTML = `<i class="fas fa-heart"></i> ${likeCount + 1}`;
             }
             
-            // ±£´æµ½±¾µØ´æ´¢
+            // ä¿å­˜åˆ°æœ¬åœ°å­˜å‚¨
             localStorage.setItem('likedImages', JSON.stringify(state.likedImages));
         }
 
-        // äÖÈ¾·ÖÒ³
+        // æ¸²æŸ“åˆ†é¡µ
         function renderPagination(totalPages) {
             if (totalPages <= 1) {
                 pagination.style.display = 'none';
@@ -756,11 +756,11 @@
             
             pagination.style.display = 'flex';
             
-            // ¸üĞÂ°´Å¥×´Ì¬
+            // æ›´æ–°æŒ‰é’®çŠ¶æ€
             prevBtn.disabled = state.currentPage === 1;
             nextBtn.disabled = state.currentPage === totalPages;
             
-            // Ìí¼ÓÒ³Âëµã»÷ÊÂ¼ş
+            // æ·»åŠ é¡µç ç‚¹å‡»äº‹ä»¶
             prevBtn.onclick = () => {
                 if (state.currentPage > 1) {
                     state.currentPage--;
@@ -775,14 +775,14 @@
                 }
             };
             
-            // Éú³ÉÒ³Âë
+            // ç”Ÿæˆé¡µç 
             pageNumbers.innerHTML = '';
             
-            // ÏÔÊ¾×î¶à5¸öÒ³Âë
+            // æ˜¾ç¤ºæœ€å¤š5ä¸ªé¡µç 
             let startPage = Math.max(1, state.currentPage - 2);
             let endPage = Math.min(totalPages, startPage + 4);
             
-            // µ÷ÕûÆğÊ¼Ò³ÂëÒÔÈ·±£ÏÔÊ¾5¸öÒ³Âë
+            // è°ƒæ•´èµ·å§‹é¡µç ä»¥ç¡®ä¿æ˜¾ç¤º5ä¸ªé¡µç 
             if (endPage - startPage < 4) {
                 startPage = Math.max(1, endPage - 4);
             }
@@ -801,48 +801,48 @@
             }
         }
 
-        // ËÑË÷Í¼Æ¬
+        // æœç´¢å›¾ç‰‡
         function searchImages(query) {
             if (!query.trim()) {
-                // Èç¹ûËÑË÷¿òÎª¿Õ£¬ÏÔÊ¾µ±Ç°·ÖÀà
+                // å¦‚æœæœç´¢æ¡†ä¸ºç©ºï¼Œæ˜¾ç¤ºå½“å‰åˆ†ç±»
                 renderGallery();
                 return;
             }
             
-            const allImages = imagesData["È«²¿"];
+            const allImages = imagesData["å…¨éƒ¨"];
             const filteredImages = allImages.filter(image => 
                 image.title.toLowerCase().includes(query.toLowerCase()) ||
                 image.category.toLowerCase().includes(query.toLowerCase())
             );
             
-            // ÏÔÊ¾¼ÓÔØ×´Ì¬
+            // æ˜¾ç¤ºåŠ è½½çŠ¶æ€
             loader.style.display = 'flex';
             galleryContainer.style.display = 'none';
             emptyState.style.display = 'none';
             pagination.style.display = 'none';
             
-            // Ä£ÄâËÑË÷ÑÓ³Ù
+            // æ¨¡æ‹Ÿæœç´¢å»¶è¿Ÿ
             setTimeout(() => {
                 if (filteredImages.length === 0) {
-                    // Ã»ÓĞËÑË÷½á¹û
+                    // æ²¡æœ‰æœç´¢ç»“æœ
                     loader.style.display = 'none';
                     emptyState.style.display = 'block';
                     emptyState.innerHTML = `
                         <i class="fas fa-search"></i>
-                        <h3>Î´ÕÒµ½Ïà¹Ø±ÚÖ½</h3>
-                        <p>Ã»ÓĞÕÒµ½Óë"${query}"Ïà¹ØµÄ±ÚÖ½</p>
+                        <h3>æœªæ‰¾åˆ°ç›¸å…³å£çº¸</h3>
+                        <p>æ²¡æœ‰æ‰¾åˆ°ä¸"${query}"ç›¸å…³çš„å£çº¸</p>
                     `;
                     return;
                 }
                 
-                // ¸üĞÂ±êÌâºÍ¼ÆÊı
-                galleryTitle.textContent = `ËÑË÷: "${query}"`;
-                imageCount.textContent = `ÕÒµ½ ${filteredImages.length} ÕÅÍ¼Æ¬`;
+                // æ›´æ–°æ ‡é¢˜å’Œè®¡æ•°
+                galleryTitle.textContent = `æœç´¢: "${query}"`;
+                imageCount.textContent = `æ‰¾åˆ° ${filteredImages.length} å¼ å›¾ç‰‡`;
                 
-                // äÖÈ¾ËÑË÷½á¹û£¨²»·ÖÒ³£©
+                // æ¸²æŸ“æœç´¢ç»“æœï¼ˆä¸åˆ†é¡µï¼‰
                 renderImages(filteredImages.slice(0, 40));
                 
-                // Òş²Ø¼ÓÔØ×´Ì¬
+                // éšè—åŠ è½½çŠ¶æ€
                 loader.style.display = 'none';
                 galleryContainer.style.display = 'grid';
             }, 500);
